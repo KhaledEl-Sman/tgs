@@ -19,7 +19,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    /*
     cursor: url("../media/0000.png") 10 10, auto;
+    */
 }
 
 ::-webkit-scrollbar {
