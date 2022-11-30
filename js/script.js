@@ -173,7 +173,9 @@ $(document).ready(function () {
         let header_slider = new Swiper('header .swiper-container', {
             loop: true,
             autoplay: {
-                delay: 3000,
+                delay: 4000,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true
             },
             speed: 1500,
             slidesPerView: 1,
@@ -205,7 +207,9 @@ $(document).ready(function () {
                 prevEl: '.services-slider .swiper-button-prev .arrow-icon',
             },
             autoplay: {
-                delay: 2000,
+                delay: 3000,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true
             },
             loop: true,
             speed: 1000,
@@ -238,7 +242,9 @@ $(document).ready(function () {
             spaceBetween: 0,
             loop: true,
             autoplay: {
-                delay: 1500,
+                delay: 2500,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true
             },
             speed: 1000,
             breakpoints: {
@@ -267,7 +273,9 @@ $(document).ready(function () {
             loop: true,
             slidesPerView: 4,
             autoplay: {
-                delay: 1000,
+                delay: 2000,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true
             },
             speed: 1000,
             breakpoints: {
@@ -291,7 +299,9 @@ $(document).ready(function () {
                 prevEl: '.careers .swiper-button-prev .arrow-icon',
             },
             autoplay: {
-                delay: 2000,
+                delay: 3000,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true
             },
             speed: 1000,
             slidesPerView: 3,
