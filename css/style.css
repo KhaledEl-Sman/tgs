@@ -59,7 +59,7 @@ body {
 .spanner img {
     width: 120px;
     transform: scale(1);
-    animation: logo-move 2.25s ease;
+    animation: logo-move 2.5s ease;
     opacity: 0;
 }
 
