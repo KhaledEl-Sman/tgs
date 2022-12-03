@@ -381,7 +381,9 @@ $(document).ready(function () {
     })
 
     //loader
-    $(".spanner").fadeOut(2000, function () {
+    $(".navbar-brand img").fadeOut(0);
+    $(".navbar-brand img").delay(1750).fadeIn(1000);
+    $(".spanner").fadeOut(2500, function () {
         $("html, body").css("overflow-y", "auto")
     });
 
