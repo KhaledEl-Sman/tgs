@@ -321,6 +321,14 @@ $(document).ready(function () {
                 }
             },
         });
+        
+        $(".swiper-container").mouseleave(function () {
+            header_slider.autoplay.start();
+            services_slider.autoplay.start();
+            products_slider.autoplay.start();
+            customers_slider.autoplay.start();
+            careers_slider.autoplay.start();
+        })
     }
 
     new WOW().init();
