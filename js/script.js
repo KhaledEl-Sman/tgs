@@ -366,9 +366,22 @@ $(document).ready(function () {
         gameLoop();
     }
 
+    String.prototype.filename = function (extension) {
+        var s = this.replace(/\\/g, '/');
+        s = s.substring(s.lastIndexOf('/') + 1);
+        return extension ? s.replace(/[?#].+$/, '') : s.split('.')[0];
+    }
+
+    $(".about .vision .section-2").mouseover(function () {
+        $(this).children().eq(0).children().eq(0).attr("src", "media/" + $(this).children().eq(0).children().eq(0).attr("src").filename() + ".png")
+    })
+
+    $(".about .vision .section-2").mouseleave(function () {
+        $(this).children().eq(0).children().eq(0).attr("src", "media/about/" + $(this).children().eq(0).children().eq(0).attr("src").filename() + ".png")
+    })
 
     //loader
-    $(".spanner").fadeOut(1500, function () {
+    $(".spanner").fadeOut(2000, function () {
         $("html, body").css("overflow-y", "auto")
     });
 
