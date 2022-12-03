@@ -59,20 +59,32 @@ body {
 .spanner img {
     width: 120px;
     transform: scale(1);
-    animation: logo .85s infinite ease-out;
+    animation: logo-move 2.25s ease;
+    opacity: 0;
 }
 
-@keyframes logo {
+@keyframes logo-move {
     0% {
-        transform: scale(1);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
     }
 
-    50% {
-        transform: scale(1.2);
+    25% {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
     }
 
     100% {
-        transform: scale(1);
+        position: absolute;
+        left: 7%;
+        top: 1rem;
+        opacity: 1;
     }
 }
 
@@ -480,7 +492,7 @@ About
 ********************************************/
 
 .about {
-    background-image: url("../media/about/5.png");
+    background-image: url("../media/about/5-.png");
     background-repeat: no-repeat;
     background-size: 300px;
     background-position: top right;
@@ -572,15 +584,25 @@ h4 i img {
 }
 
 .about .part:hover {
-    background-image: unset;
-    border-color: #ff8600;
+    background-image: url("../media/2.png");
+    border-color: #1d57cf;
+    background-color: #1d57cf;
 }
 
 .about .part:hover .icon {
     border-color: #ff8600;
+    background-color: #ff8600;
 }
 
 .about .part:hover h5 {
+    color: #ff8600;
+}
+
+.about .part:hover span {
+    color: white;
+}
+
+.about .part:hover span i {
     color: #ff8600;
 }
 
@@ -862,11 +884,15 @@ h4 i img {
 
 .about .vision .section-2:hover {
     border-color: #ff8600 !important;
-    background-image: unset;
+    background-image: url("../media/1.png");
 }
 
 .about .vision .section-2:hover b {
-    color: #ff8600;
+    color: #ffb600;
+}
+
+.about .vision .section-2:hover span {
+    color: white;
 }
 
 .about .vision .section-2:hover i {
@@ -1359,7 +1385,7 @@ Customers
 
 .customers .vision .section-2:hover {
     border-color: #ff8600 !important;
-    background-image: unset;
+    background-image: url("../media/1.png");
 }
 
 .customers .vision .section-2:hover span {
@@ -1515,6 +1541,7 @@ News
 
 .news .main-news:hover .news-content {
     border: 1px solid #ff8600;
+    background-image: url("../media/news/back.png");
 }
 
 .news .main-news:hover .news-content h5 {
