@@ -321,7 +321,7 @@ $(document).ready(function () {
                 }
             },
         });
-        
+
         $(".swiper-container").mouseleave(function () {
             header_slider.autoplay.start();
             services_slider.autoplay.start();
@@ -334,29 +334,29 @@ $(document).ready(function () {
     new WOW().init();
 
     if (learn_more) {
-        let slides = [], i = 0, current, temp = [];
+        let slides = [], i = 0, current, temp = [], stopLoop = true;
         $('.slide').each(function () {
             slides[i] = $(this).children().eq(0).attr("src");
             i++;
         })
+
         $(".pics-slider div").click(function () {
             if (!$(this).hasClass("active")) {
+                clearTimeout(x);
                 current = $(this).children().eq(0).attr("src");
-                $(".pics-slider .main-pic").attr("src", current)
-            }
-            temp[0] = current;
-            for (let index = 0; index < slides.length; index++) {
-                let test = $(".pics-slider div").children().eq(index).attr("src");
-                if (test != current) {
-                    temp[temp.length] = test;
+                for (let index = 0; index < slides.length; index++) {
+                    if (slides[index] == current)
+                        slides.splice(index, 1);
+                }
+                slides = [current, ...slides];
+                $(".pics-slider .main-pic").attr("src", current);
+                for (let index = 0; index < slides.length; index++) {
+                    $(".pics-slider div").children().eq(index).attr("src", slides[index]);
                 }
             }
-            for (let index = 0; index < slides.length; index++) {
-                slides[index] = temp[index];
-                $(".pics-slider div").children().eq(index).attr("src", slides[index]);
-            }
         })
-        let j = 0;
+
+        let x = 0;
         function gameLoop() {
             x = setTimeout(gameLoop, 3000);
             for (let index = 0; index < slides.length; index++) {
