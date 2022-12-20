@@ -106,10 +106,6 @@ Navbar
     background-size: cover;
 }
 
-.navbar-brand img {
-    transition: .5s;
-}
-
 .navbar-toggler {
     overflow: hidden;
     border: none;
@@ -208,7 +204,7 @@ Navbar
 }
 
 .animated-icon1 span {
-    background: #ff8600;
+    background: #1d4aa7;
 }
 
 .animated-icon1 span:nth-child(1) {
@@ -866,11 +862,11 @@ h4 i img {
     justify-content: center;
     padding: 2rem;
     font-size: 16px;
-    color: #282828;
-    background-image: url("../media/about/square.png");
+    color: #DDD;
+    background-image: url("../media/1.1.png");
     border-radius: 25px 0 25px 0;
     transition: 1s ease-out;
-    text-align: justify;
+    text-align: center;
     overflow-y: auto;
 }
 
@@ -2658,20 +2654,16 @@ Max-Screen
     }
 }
 
-/*
-orange
-color: #ff8600;
-color: #ffb600;
-blue
-icon color: #1570b6;
-color: #1d57cf;
-color: #1d4aa7;
-paragraph color: #282828;
-
-font-family: 'Raleway', sans-serif;
-font-family: 'Quicksand', sans-serif;
-font-family: 'Source Sans Pro', sans-serif;
-@media (max-width: 600px) {
-    
+@media (min-width: 1201px) {
+    #myVideo {
+        width: 100% !important;
+        height: auto !important;
+    }
 }
-*/
+
+@media (max-width: 1200px) {
+    #myVideo {
+        width: auto !important;
+        height: 100% !important;
+    }
+}
